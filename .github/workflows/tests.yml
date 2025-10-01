@@ -32,5 +32,11 @@ jobs:
       - name: Compile TypeScript
         run: npx tsc
 
-      - name: Run tests with Mocha
-        run: npx mocha -r ts-node/register "src/tests/**/*.test.ts" --timeout 20000
+      - name: Run tests
+        run: npm run test:ci
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: mochaweseome-report
+          path: mochawesome-report/

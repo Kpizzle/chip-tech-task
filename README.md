@@ -29,6 +29,8 @@ This will kick off the tests.
 
 ## Results
 
+INFO: You will need Java and Allure installed to view the results locally
+
 todo: generating results
 
 view results in CI

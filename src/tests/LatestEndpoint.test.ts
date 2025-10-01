@@ -6,7 +6,7 @@ import apiClient from "../utils/ApiClient";
 dotenv.config();
 
 describe("/Latest", () => {
-  it("should fetch latest rates with default base (EUR)", async () => {
+  it.only("should fetch latest rates with default base (EUR)", async () => {
     const res = await apiClient<latestRates>("/latest");
 
     expect(res.status).to.equal(200);

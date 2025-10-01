@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "mocha -r ts-node/register src/tests/**/*.test.ts --timeout 100000"
+    "start": "mocha -r ts-node/register src/tests/**/*.test.ts --timeout 100000",
+    "test:ci": "mocha -r ts-node/register 'src/tests/**/*.test.ts' --timeout 20000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=report"
   },
   "keywords": [],
   "author": "",
@@ -13,14 +14,13 @@
     "@types/chai": "^5.2.2",
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.6.1",
-    "allure-commandline": "^2.34.1",
     "chai": "^6.2.0",
     "mocha": "^11.7.3",
+    "mochawesome": "^7.1.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "allure-mocha": "^3.4.1",
     "axios": "^1.12.2",
     "dotenv": "^17.2.3"
   }

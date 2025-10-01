@@ -27,8 +27,6 @@ const apiClient = async <T>(
     ...restOptions,
   };
 
-  //console.log(config);
-
   return axios.request<T>(config);
 };
 

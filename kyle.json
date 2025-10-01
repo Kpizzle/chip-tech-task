@@ -1,0 +1,17 @@
+{
+  "name": "kyle potter",
+  "age": 37,
+  "location": "Hastings, East Sussex",
+  "relationship": "engaged",
+  "CanDrive": true,
+  "hobbies": ["golf", "airsoft", "Reading", "flying drones", "photography"],
+  "pets": [
+    {
+      "petName": "daisy",
+      "animalType": "cat"
+    }
+  ],
+  "interests": ["coding", "building_apps", "travel", "whisky"],
+  "favorite_foods": ["mexican", "bbq", "japanese"],
+  "favorite_holiday_destination": "kefalonia, greece"
+}

@@ -45,17 +45,17 @@ example of reports: https://github.com/Kpizzle/chip-tech-task/actions/runs/18167
 
 # Questions
 
-Question One
+#### Question One
 I spent just over 2hrs on the test, a lot of time was lost due to the limitations of the API I'd chosen to use. I wasn't aware of the free restrictions and the rate limiting, which I've emailed Dan regarding, one being that only one endpoint is available on the free tier.
 
 If I had more time to work on the project I'd work on the reporting functionality. I'd have the test results hosted on a platform, like github pages, that would be able to deal with the logic of having multiple reports, so we would be able to build up a library of past test runs.
 
 I'd also look to see if there was a more elegant solution for verify the response object. There is a lot of duplicate checks and to keep the code DRY and I'd refactor this into a util function if the framework was to grow.
 
-Question Two
+#### Question Two
 my json file can be found in `./Kyle.json` in the root dir.
 
-Question Three
+#### Question Three
 My approach to performance testing the API, assuming I had access to the team maintaining it, I'd work with the developers/Infra team to understand the underlying architecture of the service along with current metrics. Daily users, Requests per min etc.
 
 Once those were established I'd document the user journeys that could be made with the APIs, to understand typical work flows. Then, I would start to design the relevant test needed for what we are testing.

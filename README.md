@@ -39,27 +39,27 @@ This will run the suite and generate a folder `./mochawesome` in the root dir. O
 
 When you've pushed to master or created a feature branch you'll find the results as an artifact in the actions > specific run section. You'll be able to download and view the results locally.
 
-You'll also be able to see the results in the build logs, in the `Run tests` section.  
+You'll also be able to see the results in the build logs, in the `Run tests` section.
 
 example of reports: https://github.com/Kpizzle/chip-tech-task/actions/runs/18167942264
 
 # Questions
 
-1. I spent just over 2hrs on the test, a lot of time was lost due to the limitations of the API I'd chosen to use. I wasn't aware of the free restrictions and the rate limiting, which I've emailed Dan regarding, one being that only one endpoint is available on the free tier.  
+Question One
+I spent just over 2hrs on the test, a lot of time was lost due to the limitations of the API I'd chosen to use. I wasn't aware of the free restrictions and the rate limiting, which I've emailed Dan regarding, one being that only one endpoint is available on the free tier.
 
-If I had more time to work on the project I'd work on the reporting functionality. I'd have the test results hosted on a platform, like github pages, that would be able to deal with the logic of having multiple reports, so we would be able to build up an interaction collection of past test runs. 
+If I had more time to work on the project I'd work on the reporting functionality. I'd have the test results hosted on a platform, like github pages, that would be able to deal with the logic of having multiple reports, so we would be able to build up a library of past test runs.
 
-I'd also look to see if there was a more elegant solution for verify the response object. There is a lot of duplicate checks and to keep the code DRY and I'd refactor this into a util function if the framework was to grow. 
+I'd also look to see if there was a more elegant solution for verify the response object. There is a lot of duplicate checks and to keep the code DRY and I'd refactor this into a util function if the framework was to grow.
 
-2. my json file can be found in `./Kyle.json` in the root dir. 
+Question Two
+my json file can be found in `./Kyle.json` in the root dir.
 
-3. My approach to performance testing the API, assuming I had access to the team maintaining it, I'd work with the developers/Infra team to understand the underlying architecture of the service along with current metrics. Daily users, Requests per min etc. 
+Question Three
+My approach to performance testing the API, assuming I had access to the team maintaining it, I'd work with the developers/Infra team to understand the underlying architecture of the service along with current metrics. Daily users, Requests per min etc.
 
-Once those were established I'd document the user journeys that could be made with the APIs, to understand typical work flows. Then, I would start to design the relevant test needed for what we are testing. 
+Once those were established I'd document the user journeys that could be made with the APIs, to understand typical work flows. Then, I would start to design the relevant test needed for what we are testing.
 
-Are we looking to see how the service handles a spike in sudden traffic or a time of expected extra load, or are we looking to push the system to it's fail point. 
+Are we looking to see how the service handles a spike in sudden traffic or a time of expected extra load, or are we looking to push the system to it's fail point.
 
-All these would contribute to how we would design the performance test. 
-
-
-
+All these would contribute to how we would design the performance test.

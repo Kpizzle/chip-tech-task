@@ -6,7 +6,7 @@ import apiClient from "../utils/ApiClient";
 dotenv.config();
 
 describe("/Latest", () => {
-  it.skip("should fetch latest rates with default base (EUR)", async () => {
+  it("should fetch latest rates with default base (EUR)", async () => {
     const res = await apiClient<latestRates>("/latest");
 
     expect(res.status).to.equal(200);
@@ -15,7 +15,7 @@ describe("/Latest", () => {
     expect(res.data).to.have.property("base");
     expect(res.data.base).to.equal("EUR");
   });
-  it.skip("should fetch latest rates against USD", async () => {
+  it("should fetch latest rates against USD", async () => {
     const res = await apiClient<latestRates>("/latest", {
       params: { symbols: "USD" },
     });
@@ -33,8 +33,6 @@ describe("/Latest", () => {
       params: { symbols: "USD, GBP" },
     });
 
-    console.log(res.data);
-
     expect(res.status).to.equal(200);
     expect(res.data.success).to.be.true;
     expect(res.data).to.have.property("rates");
@@ -50,7 +48,7 @@ describe("/Latest", () => {
     expect(res.data.rates["GBP"]).to.be.a("number");
   });
 
-  it.skip("should fail with unknown currency", async () => {
+  it("should fail with unknown currency", async () => {
     const res = await apiClient<latestRatesError>("/latest", {
       params: { symbols: "XYZ" },
     });
